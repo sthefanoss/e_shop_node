@@ -15,4 +15,8 @@ html(lang="en")
                         a(href="/admin/add-product") Add Product
         main
             h1 My Products
-            p List of all my products...
+            if(products.length > 0)
+                each product in products
+                    p #{product.title}
+            else
+                p No products yet.
