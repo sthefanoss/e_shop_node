@@ -1,33 +1,24 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title E Shop
-        link(rel="stylesheet", href="/css/main.css")
-        link(rel="stylesheet", href="/css/product.css")
-    body
-        header.main-header
-            nav.main-header__nav
-                ul.main-header__item-list
-                    li.main-header__item
-                        a(href="/" class="active") Shop
-                    li.main-header__item
-                        a(href="/admin/add-product") Add Product
-        main
-            h1 My Products
-            if products.length > 0
-                .grid
-                    each product in products
-                        article.card.product-item
-                            header.card__header
-                                h1.product__title #{product.title}
-                            .card__image
-                                img(src= product.imageUrl, alt="")
-                            .card__content
-                                h2.product__price #{product.price}
-                                p.product__description #{product.description}
-                            .card__actions
-                                button.btn Add to Cart
-            else
-                p No products yet.
+extends layouts/main.pug
+
+block styles
+    link(rel="stylesheet", href="/css/form.css")
+    link(rel="stylesheet", href="/css/product.css")
+
+block content
+    main
+        h1 My Products
+        if products.length > 0
+            .grid
+                each product in products
+                    article.card.product-item
+                        header.card__header
+                            h1.product__title #{product.title}
+                        .card__image
+                            img(src= product.imageUrl, alt="")
+                        .card__content
+                            h2.product__price #{product.price}
+                            p.product__description #{product.description}
+                        .card__actions
+                            button.btn Add to Cart
+        else
+            p No products yet.
