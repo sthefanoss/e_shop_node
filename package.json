@@ -1,0 +1,31 @@
+{
+  "name": "e_shop_node",
+  "version": "1.0.0",
+  "description": "An eletronic shop made with Node.js.",
+  "main": "./lib/main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./lib/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sthefanoss/e_shop_node.git"
+  },
+  "keywords": [
+    "Node.js",
+    "backend",
+    "e-shop"
+  ],
+  "author": "Sthefano Schiavon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sthefanoss/e_shop_node/issues"
+  },
+  "homepage": "https://github.com/sthefanoss/e_shop_node#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
