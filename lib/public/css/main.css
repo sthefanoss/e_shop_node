@@ -51,6 +51,23 @@ main {
   color: #ffeb3b;
 }
 
+.main-header__auth_item {
+  margin: 0 1rem;
+  padding: 0;
+}
+
+
+.main-header__auth_item a {
+  text-decoration: none;
+  color:#6effff;
+}
+
+.main-header__auth_item a:hover,
+.main-header__auth_item a:active,
+.main-header__auth_item a.active {
+  color: #ffeb3b;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
