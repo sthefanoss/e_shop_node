@@ -7,12 +7,37 @@ html(lang="en")
         link(rel="stylesheet", href="/css/main.css")
         block styles
     body
+        .backdrop
         header.main-header
+            button(id="side-menu-toggle") Menu
             nav.main-header__nav
                 ul.main-header__item-list
                     li.main-header__item
                         a(href="/" class = (view.route === "/" ? 'active' : '')) Shop
                     li.main-header__item
-                        a(href="/admin/add-product" class = (view.route === "/admin/add-product" ? 'active' : '')) Add Product
+                        a(href="/products" class = (view.route === "/products" ? 'active' : '')) Products
+                    li.main-header__item
+                        a(href="/cart" class = (view.route === "/cart" ? 'active' : '')) Cart
+                    li.main-header__item
+                        a(href="/orders" class = (view.route === "/orders" ? 'active' : '')) Orders
+                    li.main-header__item
+                        a(href="/auth/your-products" class = (view.route === "/auth/your-products" ? 'active' : '')) Your Products
+                    li.main-header__item
+                        a(href="/auth/add-product" class = (view.route === "/auth/add-product" ? 'active' : '')) Add Product
+        .mobile-nav
+            .mobile-nav__item-list
+                li.mobile-nav__item
+                    a(href="/" class = (view.route === "/" ? 'active' : '')) Shop
+                li.mobile-nav__item
+                    a(href="/products" class = (view.route === "/products" ? 'active' : '')) Products
+                li.mobile-nav__item
+                    a(href="/cart" class = (view.route === "/cart" ? 'active' : '')) Cart
+                li.mobile-nav__item
+                    a(href="/orders" class = (view.route === "/orders" ? 'active' : '')) Orders
+                li.mobile-nav__item
+                    a(href="/auth/your-products" class = (view.route === "/auth/your-products" ? 'active' : '')) Your Products
+                li.mobile-nav__item
+                    a(href="/auth/add-product" class = (view.route === "/auth/add-product" ? 'active' : '')) Add Product
         main
             block content
+        script(src="/js/main.js")

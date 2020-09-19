@@ -1,4 +1,4 @@
-extends layouts/main.pug
+extends ../../layouts/main.pug
 
 block styles
     link(rel="stylesheet", href="/css/form.css")
@@ -6,7 +6,6 @@ block styles
 
 block content
     main
-        h1 My Products
         if products.length > 0
             .grid
                 each product in products
