@@ -13,6 +13,16 @@ html(lang="en")
                     li.main-header__item
                         a(href="/" class = (view.route === "/" ? 'active' : '')) Shop
                     li.main-header__item
-                        a(href="/admin/add-product" class = (view.route === "/admin/add-product" ? 'active' : '')) Add Product
+                        a(href="/products" class = (view.route === "/products" ? 'active' : '')) Products
+                    li.main-header__item
+                        a(href="/chart" class = (view.route === "/chart" ? 'active' : '')) Chart
+                    li.main-header__item
+                        a(href="/admin/products" class = (view.route === "/admin/products" ? 'active' : '')) [Admin] Products
+                    li.main-header__item
+                        a(href="/admin/add-product" class = (view.route === "/admin/add-product" ? 'active' : '')) [Admin] Add Product
+                    li.main-header__item
+                        a(href="/admin/edit-product" class = (view.route === "/admin/edit-product" ? 'active' : '')) [Admin] Edit Product
+                    li.main-header__item
+                        a(href="/admin/delete-product" class = (view.route === "/admin/delete-product" ? 'active' : '')) [Admin] Delete Product
         main
             block content
