@@ -17,8 +17,8 @@ html(lang="en")
                     li.main-header__item
                         a(href="/cart" class = (view.route === "/cart" ? 'active' : '')) Cart
                     li.main-header__auth_item
-                        a(href="/admin/your-products" class = (view.route === "/admin/your-products" ? 'active' : '')) Your Products
+                        a(href="/auth/your-products" class = (view.route === "/auth/your-products" ? 'active' : '')) Your Products
                     li.main-header__auth_item
-                        a(href="/admin/add-product" class = (view.route === "/admin/add-product" ? 'active' : '')) Add Product
+                        a(href="/auth/add-product" class = (view.route === "/auth/add-product" ? 'active' : '')) Add Product
         main
             block content
