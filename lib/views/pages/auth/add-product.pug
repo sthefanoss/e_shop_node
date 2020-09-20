@@ -5,7 +5,7 @@ block styles
     link(rel="stylesheet", href="/css/product.css")
 
 block content
-    form(action="/admin/add-product" method="post" class="product-form")
+    form(action="/auth/add-product" method="post" class="product-form")
         .form-control
             label(for="title") Title
             input(type="text" name="title" id="title")
