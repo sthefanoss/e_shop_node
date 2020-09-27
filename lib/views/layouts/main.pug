@@ -21,23 +21,23 @@ html(lang="en")
                     li.main-header__item
                         a(href="/orders" class = (view.route === "/orders" ? 'active' : '')) Orders
                     li.main-header__item
-                        a(href="/auth/your-products" class = (view.route === "/auth/your-products" ? 'active' : '')) Your Products
+                        a(href="/auth/products" class = (view.route === "/auth/products" ? 'active' : '')) Your Products
                     li.main-header__item
-                        a(href="/auth/add-product" class = (view.route === "/auth/add-product" ? 'active' : '')) Add Product
+                        a(href="/auth/editor" class = (view.route === "/auth/editor" ? 'active' : '')) Add Product
         .mobile-nav
             .mobile-nav__item-list
-                li.mobile-nav__item
+                li.main-header__item
                     a(href="/" class = (view.route === "/" ? 'active' : '')) Shop
-                li.mobile-nav__item
+                li.main-header__item
                     a(href="/products" class = (view.route === "/products" ? 'active' : '')) Products
-                li.mobile-nav__item
+                li.main-header__item
                     a(href="/cart" class = (view.route === "/cart" ? 'active' : '')) Cart
-                li.mobile-nav__item
+                li.main-header__item
                     a(href="/orders" class = (view.route === "/orders" ? 'active' : '')) Orders
-                li.mobile-nav__item
-                    a(href="/auth/your-products" class = (view.route === "/auth/your-products" ? 'active' : '')) Your Products
-                li.mobile-nav__item
-                    a(href="/auth/add-product" class = (view.route === "/auth/add-product" ? 'active' : '')) Add Product
+                li.main-header__item
+                    a(href="/auth/products" class = (view.route === "/auth/products" ? 'active' : '')) Your Products
+                li.main-header__item
+                    a(href="/auth/editor" class = (view.route === "/auth/editor" ? 'active' : '')) Add Product
         main
             block content
         script(src="/js/main.js")
