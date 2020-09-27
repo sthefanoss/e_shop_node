@@ -7,25 +7,25 @@ block styles
 
 block content
     main
-        if cartList.length > 0
-            h2 Total : $#{total}
+        h2 Total : $#{cart.total}
+        if cart.items.length > 0
             .grid
-                each cartItem in cartList
+                each item in cart.items
                     article.card.product-item
                         header.card__header
-                            h2.product__title Product #{cartItem.product.title}
-                            h2.product__title Quantity #{cartItem.quantity}
+                            h2.product__title Product #{item.product.title}
+                            h2.product__title Quantity #{item.quantity}
                         .card__image
-                            img(src= cartItem.product.imageUrl, alt="")
+                            img(src= item.product.imageUrl, alt="")
                         .card__content
-                            h2.product__price Total: $#{cartItem.product.price*cartItem.quantity}
+                            h2.product__price Total: $#{item.product.price*item.quantity}
                         .card__actions
                             form(action="/cart", method="POST")
                                 button.btn -
-                                input(type="hidden" name="productId" value= cartItem.product.id)
+                                input(type="hidden" name="productId" value= item.product.id)
                                 input(type="hidden" name="remove" value= true)
                             form(action="/cart", method="POST")
                                 button.btn +
-                                input(type="hidden" name="productId" value= cartItem.product.id)
+                                input(type="hidden" name="productId" value= item.product.id)
         else
             p Cart is Empty.
